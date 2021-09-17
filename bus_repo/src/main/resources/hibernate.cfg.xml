@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- Database connection settings -->
+        <property name="connection.driver_class">org.postgresql.Driver</property>
+        <property name="connection.url">jdbc:postgresql://localhost:5432/webcourse</property>
+        <property name="connection.username">postgres</property>
+        <property name="connection.password"></property>
+        <property name="show_sql">true</property>
+
+        <mapping class="classes.users" />
+        <mapping class="classes.stations" />
+        <mapping class="classes.route" />
+        <mapping class="classes.schedule" />
+        <mapping class="classes.user_trip" />
+
+    </session-factory>
+</hibernate-configuration>
